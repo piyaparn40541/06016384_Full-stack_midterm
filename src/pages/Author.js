@@ -17,7 +17,6 @@ function Author() {
         .then(res => res.json())
         .then((result) => {
           setPosts(result.filter(post => post.author == authorId));
-          console.log(result);
         })
         .catch(err => console.log(err))
         .finally(() => setPostsLoading(false));
@@ -26,7 +25,6 @@ function Author() {
         .then(res => res.json())
         .then((result) => {
           setAuthor(result);
-          console.log(result);
         })
         .catch(err => console.log(err))
         .finally(() => setAuthorLoading(false));

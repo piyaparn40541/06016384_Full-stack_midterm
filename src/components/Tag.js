@@ -6,7 +6,6 @@ const Tag = (props) => {
     const [tag, setTag] = useState();
     const [loading, setLoading] = useState(true);
     const tagId = props.tagId;
-    console.log(tagId);
 
     useEffect(() => {
         setLoading(true);

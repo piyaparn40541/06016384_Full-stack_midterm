@@ -18,7 +18,6 @@ function Home() {
       .then(res => res.json())
       .then((result) => {
         setPosts(result);
-        console.log(result);
       })
       .catch(err => console.log(err))
       .finally(() => setPostsLoading(false));
@@ -27,7 +26,6 @@ function Home() {
       .then(res => res.json())
       .then((result) => {
         setAuthors(result);
-        console.log(result);
       })
       .catch(err => console.log(err))
       .finally(() => setAuthorsLoading(false));
