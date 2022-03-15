@@ -8,23 +8,19 @@ const removeHyperLinkFromExcerpt = (excerpt) => {
 
 const ShortPost = (props) => {
     return (
-        <div style={{ width: '50%', border: '1 px', padding: '10px', backgroundColor: '#F7F9F9' }}>
-            <p style={{ alignSelf: 'center' }}>Title: {props.post.title}</p>
+        <div className="container p-5 mb-5 text-center" style={{ width: '50%', backgroundColor: '#FFF5F5' }}>
+            <h4>{props.post.title}</h4>
             
-            <label>Published by </label>
+            <label>Published by&nbsp;</label>
             <Link to={`/author/${props.post.author.author}/`}>
                 {props.post.author.name}
             </Link>
-            <label> on </label>
+            <label>&nbsp;on&nbsp;</label>
             <Link to="/tag">
-                {dayjs(props.post.date).format('MMM DD')}
-            </Link>
-            <label>, </label>
-            <Link to="/tag">
-                {dayjs(props.post.date).format('YYYY')}
+                {dayjs(props.post.date).format('MMM DD, YYYY')}
             </Link>
 
-            <div dangerouslySetInnerHTML={{ __html: removeHyperLinkFromExcerpt(props.post.excerpt) }} />
+            <div className="mt-4" dangerouslySetInnerHTML={{ __html: removeHyperLinkFromExcerpt(props.post.excerpt) }} />
             
             <Link to={`/post/${props.post.id}`}>Read more...</Link>
         </div>
