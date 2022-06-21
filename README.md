@@ -3,7 +3,7 @@ Implement front-end (React or Next.js) for CMS (Content Management System) using
 
 ## How to run
 ```
-git clone https://github.com/piyaparn40541/06016384_Full-stack_midterm.git
+git clone https://github.com/pyparns/06016384_Full-stack_midterm.git
 cd 06016384_Full-stack_midterm
 npm install
 npm start
